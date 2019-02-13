@@ -6,8 +6,10 @@ namespace PadawansTask1
     {
         public static int GetYears(int initialPopulation, double percent, int visitors, int currentPopulation)
         {
-            if (initialPopulation == 0)
+            if (currentPopulation == 0 | initialPopulation == 0)
+            {
                 throw new ArgumentException();
+            }
 
             double coefficient = percent / 100;
             double population_Now = initialPopulation;
